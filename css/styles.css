@@ -1,0 +1,58 @@
+body{
+    background-color: #d9785546 !important;
+}
+.navbar{
+    background-color: #d9c2a793;
+}
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/chris-lawton-zvKx6ixUhWQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.welcome__title{
+    background-color: rgba(255, 255, 255, 0.781);
+    text-align: center;
+    border-radius: 15px;
+    padding: 2% 25%;
+}
+.list-group,
+.input-group{
+    box-shadow: 6px 10px 10px rgba(36, 34, 34, 0.575);
+    max-width: 50%;
+    margin: 3% auto;
+    border-radius: 5px;
+}
+.list-group-item{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #faf8f5 !important;
+}
+.button,
+.btn-outline-secondary{
+    background-color: #8c5454b9;
+    color: #fff !important;
+    border:1px solid transparent !important;
+    border-radius: 5px;
+    padding: 4%;
+    cursor: pointer;
+}
+.button:hover,
+.btn-outline-secondary:hover{
+    background-color: #fff !important;
+    color:#8c5454b9 !important;
+}
+.btn-outline-secondary{
+    font-weight: 700;
+}
+
+@media (min-width:768px){
+    .welcome__title{
+        padding: 2% 35%;
+    }
+}
