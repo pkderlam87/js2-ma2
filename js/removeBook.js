@@ -1,11 +1,13 @@
 import { books } from "./books.js";
 import { createList } from "./script.js";
 
+let listBooks = books;
+
 export function removeBook() {
-    let listBooks = books;
-    const deleteThisBook = event.target.dataset.item;
+
+    const bookToDelete = event.target.dataset.item;
     const newList = listBooks.filter(function (item) {
-        if (deleteThisBook !== item.title) {
+        if (bookToDelete !== item.title) {
             return true;
         }
     });
