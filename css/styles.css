@@ -14,7 +14,8 @@ body{
     background-position: center;
     background-size: cover;
 }
-.welcome__title{
+.welcome__title,
+.suggest{
     background-color: rgba(255, 255, 255, 0.781);
     text-align: center;
     border-radius: 15px;
@@ -45,7 +46,7 @@ body{
 .button:hover,
 .btn-outline-secondary:hover{
     background-color: #fff !important;
-    color:#8c5454b9 !important;
+    color:#8c5454 !important;
 }
 .btn-outline-secondary{
     font-weight: 700;
@@ -55,6 +56,9 @@ body{
     border-radius: 5px;
     text-align: center;
     padding: 7%;
+}
+.suggest{
+    margin-top: 3%;
 }
 
 @media (min-width:768px){
