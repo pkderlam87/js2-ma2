@@ -4,7 +4,8 @@ import { createInputList } from "./createInputList.js";
 
 const listKey = "newBookByUser";
 
-const listOfNewBooks = retrieveFromStorage(listKey);
+let listOfNewBooks = retrieveFromStorage(listKey);
+console.log(listOfNewBooks);
 createInputList(listOfNewBooks, ".userBook");
 
 const inputList = document.querySelector("input");
@@ -21,5 +22,7 @@ export function addToList() {
         listOfNewBooks.push(newBook);
         createInputList(listOfNewBooks, ".userBook");
         saveToStorage(listKey, listOfNewBooks);
+        console.log(listOfNewBooks);
     }
+    listOfNewBooks = retrieveFromStorage(listKey);
 }

@@ -1,13 +1,13 @@
-//import { removeInputBook } from "./removeInputBook.js";
 import { retrieveFromStorage } from "./retrieveFromStorage.js";
 import { saveToStorage } from "./saveToStorage.js";
 import { displayMessage } from "../displayMessage.js";
 
-const listKey = "newBookByUser";
+const listKey = "BooksByUser";
 
 export function createInputList(listOfNewBooks, target) {
     const userList = document.querySelector(target);
     saveToStorage(listKey, listOfNewBooks);
+    console.log(listOfNewBooks);
     if (listOfNewBooks.length == 0) {
         displayMessage("noResults", "Add some new title", ".userBook");
     } else {
@@ -46,5 +46,7 @@ function removeInputBook() {
     listOfNewBooks = newList;
     console.log(listOfNewBooks);
     saveToStorage(listKey, listOfNewBooks);
+    console.log(listOfNewBooks);
+    listOfNewBooks = retrieveFromStorage(listKey);
     createInputList(listOfNewBooks, ".userBook");
 }
