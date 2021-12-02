@@ -1,16 +1,24 @@
-import { createInputList } from "./createInputList.js";
+/*import { createInputList } from "./createInputList.js";
 import { retrieveFromStorage } from "./retrieveFromStorage.js";
+import { saveToStorage } from "./saveToStorage.js";
 
-let listItems = retrieveFromStorage();
+const listKey = "newBookByUser";
+let listItems = retrieveFromStorage(listKey);
+console.log(listItems);
 
 export function removeInputBook() {
-    console.log(event);
     const deleteThisItem = event.target.dataset.item;
+    console.log(deleteThisItem);
+    console.log(listItems);
     const newList = listItems.filter(function (item) {
-        if (deleteThisItem !== item) {
+        console.log(item.title);
+        if (deleteThisItem !== item.title) {
             return true;
         }
     })
+    console.log(newList);
     listItems = newList;
-    createInputList();
-}
+    console.log(listItems);
+    saveToStorage(listKey, listItems);
+    createInputList(listItems, ".userBook");
+}*/

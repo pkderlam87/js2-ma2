@@ -3,5 +3,6 @@ export function retrieveFromStorage(key) {
     if (!currentBooks) {
         return [];
     }
+    console.log(currentBooks);
     return JSON.parse(currentBooks);
 }
