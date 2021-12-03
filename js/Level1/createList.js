@@ -23,5 +23,5 @@ export function createList(listBooks = books, target = ".list-group") {
             book.addEventListener("click", removeBook);
         });
     }
-}
+};
 createList();

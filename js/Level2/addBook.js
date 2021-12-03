@@ -6,15 +6,13 @@ import { displayMessage } from "../displayMessage.js"
 const listKey = "newBookByUser";
 const emptyArray = [];
 
-let listOfNewBooks = retrieveFromStorage(listKey);
-createInputList(listOfNewBooks, ".userBook");
-
 const inputList = document.querySelector("input");
 const addButton = document.querySelector("#button-addon1");
 
 addButton.addEventListener("click", addToList);
 
 function addToList() {
+    let listOfNewBooks = retrieveFromStorage(listKey);
     const newItem = inputList.value.trim();
     if (newItem.length >= 1) {
         const newBook = { isbn: "", title: newItem };
