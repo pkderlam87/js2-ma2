@@ -1,8 +1,11 @@
 export function retrieveFromStorage(key) {
     const currentBooks = localStorage.getItem(key);
     if (!currentBooks) {
+        localStorage.clear();
         return [];
     }
-    console.log(currentBooks);
+    if (currentBooks.length == 0) {
+        localStorage.clear();
+    }
     return JSON.parse(currentBooks);
 }
